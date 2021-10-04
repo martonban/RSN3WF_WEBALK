@@ -7,7 +7,7 @@ public class ResponseDto {
     public int getId() {
         return id;
     }
-
+    //Komment
     public void setId(int id) {
         this.id = id;
     }
