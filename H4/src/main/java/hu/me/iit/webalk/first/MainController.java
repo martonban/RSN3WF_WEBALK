@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping(path="article/")
+@RequestMapping(path="article")
 public class MainController {
     private final List<ArticelDto> articels = new ArrayList<>();
     //Cikkeket akarunk kezelni. Kell egy metódus amire tudunk hivatkozni
@@ -37,7 +37,7 @@ public class MainController {
 
 
     @PutMapping(path="/{id}")
-    public void replaceArticle(@PathVariable("id") String id, @RequestBody @Valid ArticelDto articelDto){
+    public void replaceArticle(@PathVariable("id") String id, @RequestBody ArticelDto articelDto){
 
         int found = findArticelByID(id);
 

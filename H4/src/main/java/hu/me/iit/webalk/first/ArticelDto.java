@@ -4,11 +4,8 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
 public class ArticelDto {
-    @NotBlank
     private String author;
-    @NotBlank
     private String title;
-    @Min(2)
     private Integer pages;
 
 
