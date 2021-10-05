@@ -20,7 +20,7 @@ public class MainController {
     }
 
     @PostMapping(path="/")
-    public void newArticle(@RequestBody ArticelDto articelDto){
+    public void newArticle(@RequestBody @Valid ArticelDto articelDto){
         articels.add(articelDto);
     }
 
@@ -37,7 +37,7 @@ public class MainController {
 
 
     @PutMapping(path="/{id}")
-    public void replaceArticle(@PathVariable("id") String id, @RequestBody ArticelDto articelDto){
+    public void replaceArticle(@PathVariable("id") String id, @RequestBody @Valid ArticelDto articelDto){
 
         int found = findArticelByID(id);
 
@@ -50,7 +50,7 @@ public class MainController {
     }
 
     @DeleteMapping(path="/{id}")
-    public void deleteArticle(@PathVariable("id") String id){
+    public void deleteArticle(@PathVariable ("id") String id){
         int found = -1;
         for (int i=0; i<articels.size(); i++){
             if (articels.get(i).getTitle().equals(id)){

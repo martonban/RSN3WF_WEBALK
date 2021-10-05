@@ -2,10 +2,15 @@ package hu.me.iit.webalk.first;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 public class ArticelDto {
+    @NotNull
+    @NotBlank
     private String author;
+    @NotBlank
     private String title;
+    @Min(10)
     private Integer pages;
 
 
