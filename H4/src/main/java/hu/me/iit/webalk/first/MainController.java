@@ -11,8 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path="article")
-public class MainController {
-    private final List<ArticelDto> articels = new ArrayList<>();
+public class MainController  {
     //Cikkeket akarunk kezelni. Kell egy metódus amire tudunk hivatkozni
     @GetMapping(path="/", produces = MediaType.APPLICATION_JSON_VALUE)
     List<ArticelDto> allArticels(){

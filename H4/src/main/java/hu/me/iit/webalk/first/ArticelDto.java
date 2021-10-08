@@ -5,6 +5,10 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 public class ArticelDto {
+
+    @NotNull
+    private Long Id;
+
     @NotNull
     @NotBlank
     private String author;
@@ -38,10 +42,19 @@ public class ArticelDto {
         this.pages = pages;
     }
 
+    public Long getId() {
+        return Id;
+    }
+
+    public void setId(Long id) {
+        Id = id;
+    }
+
     @Override
     public String toString() {
         return "ArticelDto{" +
-                "author='" + author + '\'' +
+                "Id=" + Id +
+                ", author='" + author + '\'' +
                 ", title='" + title + '\'' +
                 ", pages=" + pages +
                 '}';
