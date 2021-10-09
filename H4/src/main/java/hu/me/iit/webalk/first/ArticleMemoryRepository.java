@@ -1,8 +1,10 @@
 package hu.me.iit.webalk.first;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
-
+@Component
 public class ArticleMemoryRepository implements ArticleRepository {
 
     private final List<ArticleDto> articles = new ArrayList<>();

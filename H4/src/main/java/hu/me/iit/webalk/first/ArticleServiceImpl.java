@@ -1,8 +1,10 @@
 package hu.me.iit.webalk.first;
 
 
-import java.util.List;
+import org.springframework.stereotype.Component;
 
+import java.util.List;
+@Component
 public class ArticleServiceImpl implements ArticleService {
 
     private final int MAXIMUM_ARTICLE_COUNT = 10;
