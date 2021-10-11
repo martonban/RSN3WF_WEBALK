@@ -9,10 +9,10 @@ public class ArticleMemoryRepository implements ArticleRepository {
 
     private final List<ArticleDto> articles = new ArrayList<>();
 
-    private int findArticelByID(Long id){
+    public int findArticelByID(Long id){
         int found = -1;
         for (int i=0; i<articles.size(); i++){
-            if (articles.get(i).getTitle().equals(id)){
+            if (articles.get(i).getId()==id){
                 found = i;
                 break;
             }
