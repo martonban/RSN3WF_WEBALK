@@ -28,7 +28,8 @@ public class ArticleMemoryRepository implements ArticleRepository {
 
     @Override
     public ArticleDto getById(Long id) {
-        return null;
+        int articleByIdIndex = findArticelByID(id);
+        return articleByIdIndex == -1 ? null : articles.get(articleByIdIndex);
     }
 
     @Override
@@ -39,6 +40,7 @@ public class ArticleMemoryRepository implements ArticleRepository {
             ArticleDto foundArticle = articles.get(found);
             foundArticle.setAuthor(articleDto.getAuthor());
             foundArticle.setPages(articleDto.getPages());
+            foundArticle.setTitle(articleDto.getTitle());
         } else {
             articles.add(articleDto);
         }
