@@ -5,4 +5,5 @@ public interface Dependency {
     int helpNoParameterReturnValue();
     int helpParameterReturnValue(int a);
     void helpParameterNoReturnValue(int a);
+    String important(String a);
 }

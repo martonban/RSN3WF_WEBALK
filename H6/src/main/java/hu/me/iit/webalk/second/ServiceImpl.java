@@ -28,5 +28,15 @@ public class ServiceImpl implements Service{
       dependency.helpParameterNoReturnValue(5);
     }
 
+    //A LEHETŐ LEGROSSZABB MEGOLDÁS DE MEGOLDÁSNAK NEM ANNYIRA ROSSZ....
+    @Override
+    public String getImportantAbstract(String str) {
+        String result;
+
+        String[] arrOfStr = str.split("<b>");
+        result = arrOfStr[2];
+        result = result.substring(0, 2);
+        return result;
+    }
 
 }

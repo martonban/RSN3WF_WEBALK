@@ -5,4 +5,5 @@ public interface Service {
     int return5();
     int callHelpAndUsedReturnValue();
     void callHelpAndPassParameterFive();
+    String getImportantAbstract(String a);
 }

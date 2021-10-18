@@ -22,4 +22,9 @@ public class DependencyImp implements Dependency{
     public void helpParameterNoReturnValue(int a) {
 
     }
+
+    @Override
+    public String important(String a) {
+        return "<b> " + a + " </b>";
+    }
 }
