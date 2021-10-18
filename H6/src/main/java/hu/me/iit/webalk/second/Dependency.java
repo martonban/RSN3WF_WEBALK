@@ -1,6 +1,8 @@
 package hu.me.iit.webalk.second;
 
 public interface Dependency {
-    void helpParameterNoReturnValue();
+    void helpNoParameterNoReturnValue();
     int helpNoParameterReturnValue();
+    int helpParameterReturnValue(int a);
+    void helpParameterNoReturnValue(int a);
 }

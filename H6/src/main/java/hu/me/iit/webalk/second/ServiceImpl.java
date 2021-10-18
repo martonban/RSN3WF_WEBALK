@@ -10,7 +10,7 @@ public class ServiceImpl implements Service{
 
     @Override
     public void calculate() {
-        dependency.helpParameterNoReturnValue();
+        dependency.helpNoParameterNoReturnValue();
     }
 
     @Override
@@ -22,4 +22,11 @@ public class ServiceImpl implements Service{
     public int callHelpAndUsedReturnValue() {
         return dependency.helpNoParameterReturnValue();
     }
+
+    @Override
+    public void callHelpAndPassParameterFive() {
+      dependency.helpParameterNoReturnValue(5);
+    }
+
+
 }
