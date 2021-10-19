@@ -2,11 +2,8 @@ package hu.me.iit.webalk.second;
 
 public class DependencyImp implements Dependency{
 
-
     @Override
-    public void helpNoParameterNoReturnValue() {
-
-    }
+    public void helpNoParameterNoReturnValue() {}
 
     @Override
     public int helpNoParameterReturnValue() {
@@ -19,9 +16,7 @@ public class DependencyImp implements Dependency{
     }
 
     @Override
-    public void helpParameterNoReturnValue(int a) {
-
-    }
+    public void helpParameterNoReturnValue(int a) {}
 
     @Override
     public String important(String a) {
