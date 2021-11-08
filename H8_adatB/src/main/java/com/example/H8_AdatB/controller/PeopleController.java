@@ -1,5 +1,7 @@
-package com.example.H8_AdatB;
+package com.example.H8_AdatB.controller;
 
+import com.example.H8_AdatB.service.PeopleService;
+import com.example.H8_AdatB.service.People;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,6 +27,12 @@ public class PeopleController {
         }
         return peopleDtoList;
     }
+
+
+    public PeopleDto save(PeopleCreateDto peopleDto){
+       return new PeopleDto(peopleService.create(peopleDto.toPeople()));
+    }
+
 
 
 }

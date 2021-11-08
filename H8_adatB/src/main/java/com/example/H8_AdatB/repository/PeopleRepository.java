@@ -1,6 +1,6 @@
-package com.example.H8_AdatB;
+package com.example.H8_AdatB.repository;
 //Normal CRUD cuccolkat beimplemnetálja
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.example.H8_AdatB.repository.People;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 // Entitáns, majd a kulcs érték típusa

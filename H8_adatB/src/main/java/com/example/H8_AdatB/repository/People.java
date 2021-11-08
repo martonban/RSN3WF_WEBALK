@@ -1,4 +1,4 @@
-package com.example.H8_AdatB;
+package com.example.H8_AdatB.repository;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,6 +13,10 @@ public class People {
     private int age;
 
     private String name;
+
+    public People() {
+
+    }
 
 
     public Long getId() {
@@ -36,6 +40,12 @@ public class People {
     }
 
     public void setName(String name) {
+        this.name = name;
+    }
+
+    public People(Long id, int age, String name) {
+        this.id = id;
+        this.age = age;
         this.name = name;
     }
 }

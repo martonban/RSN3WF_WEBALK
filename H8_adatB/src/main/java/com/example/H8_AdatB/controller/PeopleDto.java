@@ -1,12 +1,14 @@
-package com.example.H8_AdatB;
+package com.example.H8_AdatB.controller;
 
-import javax.persistence.PersistenceProperty;
+import com.example.H8_AdatB.repository.People;
+
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 public class PeopleDto {
 
-    public PeopleDto(){
+    public PeopleDto(com.example.H8_AdatB.service.People people){
 
     }
 
@@ -19,7 +21,7 @@ public class PeopleDto {
     private Long id;
     @NotEmpty
     private String name;
-    @Size(min=18)
+    @Min(18)
     private int age;
 
     public Long getId() {
