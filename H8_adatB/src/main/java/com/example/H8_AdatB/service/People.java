@@ -36,6 +36,11 @@ public class People {
         this.name = name;
     }
 
+    public People(Long id, int age, String name) {
+        this.id = id;
+        this.age = age;
+        this.name = name;
+    }
 
     public People() {
 
@@ -45,6 +50,11 @@ public class People {
         this.age = people.getAge();
         this.name = people.getName();
         this.id = people.getId();
+    }
+
+
+    public com.example.H8_AdatB.repository.People toEntity(){
+        return new com.example.H8_AdatB.repository.People(id, age, name);
     }
 
 }

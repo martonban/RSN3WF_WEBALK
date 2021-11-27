@@ -6,6 +6,5 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 // Entitáns, majd a kulcs érték típusa
 
 public interface PeopleRepository extends PagingAndSortingRepository<People, Long> {
-
-
+    Iterable<People> findAllByAgeGreaterThanEqual(int age);
 }

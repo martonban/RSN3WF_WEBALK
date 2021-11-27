@@ -1,19 +1,18 @@
 package com.example.H8_AdatB.controller;
 
-import com.example.H8_AdatB.repository.People;
 
+import com.example.H8_AdatB.service.People;
+
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
 
 public class PeopleCreateDto {
 
-
-    public PeopleCreateDto(com.example.H8_AdatB.service.People people){
+    public PeopleCreateDto() {
 
     }
 
     public PeopleCreateDto(People people){
-
         this.age = people.getAge();
         this.name = people.getName();
     }
@@ -21,9 +20,8 @@ public class PeopleCreateDto {
 
     @NotEmpty
     private String name;
-    @Size(min=18)
+    @Min(18)
     private int age;
-
 
     public String getName() {
         return name;
@@ -44,6 +42,4 @@ public class PeopleCreateDto {
     public People toPeople(){
         return new People(null, age, name);
     }
-
-
 }

@@ -4,7 +4,6 @@ import com.example.H8_AdatB.repository.People;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
 
 public class PeopleDto {
 
@@ -46,5 +45,9 @@ public class PeopleDto {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public com.example.H8_AdatB.service.People toPeople() {
+        return new com.example.H8_AdatB.service.People(id, age, name);
     }
 }
